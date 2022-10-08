@@ -1,0 +1,55 @@
+<h1>product works!</h1>
+<h1>{{ storeName }}</h1>
+<img [src]="storeLogo" />
+<h3 *ngIf="discount != discountOffers.noDiscount">
+  We offer an explicit discount of: {{ discount }}%
+</h3>
+
+<div ngbDropdown class="d-inline-block">
+  <button
+    type="button"
+    class="btn btn-outline-primary"
+    id="dropdownBasic1"
+    ngbDropdownToggle
+  >
+    Category
+  </button>
+  <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+    <button ngbDropdownItem *ngFor="let category of categoryList">
+      {{ category.name }}
+    </button>
+  </div>
+</div>
+
+<table class="table table-striped" *ngIf="isTableShown; else x">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Price</th>
+      <th scope="col">Image</th>
+      <th scope="col">CategoryId</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of productList">
+      <th scope="row">{{ product.id }}</th>
+      <td>{{ product.name }}</td>
+      <td>{{ product.qty }}</td>
+      <td>{{ product.price | currency }}</td>
+
+      <td>
+        <img [src]="product.img" class="me-2" style="width: 20px" />
+      </td>
+      <td>{{ product.categoryId | categoryName }}</td>
+    </tr>
+  </tbody>
+</table>
+<input [(ngModel)]="clientName" />
+<button (click)="hideTable()">Buy</button>
+<ng-template #x>
+  <div>
+    <p>Thanks for Purchasing, {{ clientName }}</p>
+  </div>
+</ng-template>

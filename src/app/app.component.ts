@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'lab1';
+  title = 'lab222221';
+
+
+  constructor(){
+
+  }
+
+  changeName(event : any){
+   const value = event.target.value
+   this.title = value
+  }
+
+  recieveData(event :string){
+    this.title = event
+  }
 }
