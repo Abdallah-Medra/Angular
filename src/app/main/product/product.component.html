@@ -15,7 +15,11 @@
     Category
   </button>
   <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-    <button ngbDropdownItem *ngFor="let category of categoryList">
+    <button
+      ngbDropdownItem
+      *ngFor="let category of categoryList"
+      (click)="setCategoryId(category.id)"
+    >
       {{ category.name }}
     </button>
   </div>
@@ -33,7 +37,12 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let product of productList">
+    <tr
+      *ngFor="
+        let product of productList
+          | filterArrayByKey: 'categoryId':selectedCategoryId
+      "
+    >
       <th scope="row">{{ product.id }}</th>
       <td>{{ product.name }}</td>
       <td>{{ product.qty }}</td>

@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { ProductComponent } from './main/product/product.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CategoryNamePipe } from './pipes/category-name.pipe';
+import { FilterArrayByKeyPipe } from './pipes/filter-array-by-key.pipe';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { CategoryNamePipe } from './pipes/category-name.pipe';
     MainComponent,
     FooterComponent,
     ProductComponent,
-    CategoryNamePipe
+    CategoryNamePipe,
+    FilterArrayByKeyPipe
   ],
   imports: [
     BrowserModule,

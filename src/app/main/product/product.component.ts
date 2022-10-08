@@ -21,6 +21,9 @@ export class ProductComponent {
   discountOffers= DiscountOffers
   isTableShown: boolean = true
 
+  //
+
+  selectedCategoryId : number = 0 ;
   constructor(){
     this.isPurshased = false
   }
@@ -29,6 +32,8 @@ export class ProductComponent {
     console.log("{sss")
     this.isTableShown = !this.isTableShown;
   }
-
+  setCategoryId(name :number){
+    this.selectedCategoryId = name
+  }
 }
 
