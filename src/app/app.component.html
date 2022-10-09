@@ -1,5 +1,9 @@
 <h1>My first Angular project {{ title }}</h1>
+
 <input type="text" (input)="changeName($event)" />
 <app-header [title]="title" (data)="recieveData($event)"></app-header>
+<app-login></app-login>
+<app-register></app-register>
+<app-navbar></app-navbar>
 <app-main></app-main>
 <app-footer></app-footer>

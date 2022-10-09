@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import categories from 'src/static/categories';
+import categories from 'src/static/categories.service';
 
 @Pipe({
   name: 'categoryName'
