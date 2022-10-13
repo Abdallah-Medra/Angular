@@ -1,0 +1,18 @@
+<p>todo-create works!</p>
+
+<div class="container text-center w-100 m-3">
+  <form class="row g-3" [formGroup]="addtask" (ngSubmit)="add()">
+    <div class="col">
+      <label for="" class="">Task</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="Title"
+        placeholder="Task Name"
+      />
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary mb-3">Add</button>
+    </div>
+  </form>
+</div>

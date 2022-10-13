@@ -1,11 +1,11 @@
 <h1>product works!</h1>
 <h1>{{ storeName }}</h1>
-<img [src]="storeLogo" />
+<img [src]="storeLogo" style="width: 180px" />
 <h3 *ngIf="discount != discountOffers.noDiscount">
   We offer an explicit discount of: {{ discount }}%
 </h3>
 
-<div ngbDropdown class="d-inline-block">
+<div ngbDropdown class="d-inline-block col-12">
   <button
     type="button"
     class="btn btn-outline-primary"

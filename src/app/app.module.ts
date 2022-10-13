@@ -12,6 +12,17 @@ import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
+import { BirthDatePipe } from './pipes/birth-date.pipe';
+import { ProductCardDirective } from './directives/product-card.directive';
+import { CardComponent } from './card/card.component';
+import { AppRoutingModule } from './app-routing-module';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { TodocreateComponent } from './todo-create/todo-create.component';
+import { TodoShowComponent } from './todo-show/todo-show.component';
+import { TodoUpdateComponent } from './todo-update/todo-update.component';
+import { LoaderComponent } from './loader/loader.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -25,13 +36,27 @@ import { RegisterComponent } from './register/register.component';
     FilterArrayByKeyPipe,
     LoginComponent,
     NavbarComponent,
-    RegisterComponent
+    RegisterComponent,
+    BirthDatePipe,
+    ProductCardDirective,
+    CardComponent,
+    AboutUsComponent,
+    TodocreateComponent,
+    TodoShowComponent,
+    TodoUpdateComponent,
+    LoaderComponent
   ],
+
   imports: [
     BrowserModule,
     FormsModule,
     NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule
+
+
+
 
   ],
   providers: [],

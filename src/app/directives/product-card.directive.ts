@@ -18,8 +18,5 @@ export class ProductCardDirective {
     @HostListener("mouseover") hover(){
       this.elm.nativeElement.style.border = `solid 2px ${this.borderRadius}`
       this.elm.nativeElement.style.boxShadow = `solid 2px ${this.boxShadow}`
-
    }
-
-
 }

@@ -1,0 +1,29 @@
+<p>todo-show works!</p>
+<div class="container mt-5">
+  <table class="table table-bordered border-primary">
+    <thead>
+      <tr>
+        <th scope="col">no.</th>
+        <th scope="col">Title</th>
+        <th scope="col">Is done?</th>
+        <th scope="col">creation Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of todo">
+        <th scope="row">{{ item.id }}</th>
+        <td>{{ item.title }}</td>
+        <td>{{ item.isDone }}</td>
+        <td>{{ item.creationDate }}</td>
+        <td>
+          <button class="btn btn-danger me-3" (click)="Delete(item.id)">
+            Delete
+          </button>
+          <button class="btn btn-warning" (click)="edite(item.title)">
+            Update
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
